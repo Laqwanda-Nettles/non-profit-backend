@@ -51,6 +51,7 @@ router.post("/register", async (req, res) => {
 
     //Store in Firestore
     await db.collection("users").doc(userRecord.uid).set({
+      name,
       email,
       role,
       createdAt: new Date(),
