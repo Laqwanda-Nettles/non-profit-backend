@@ -6,7 +6,7 @@ const router = express.Router();
 // Register Admin or Employee (Admin must be logged in to create employees)
 router.post("/register", async (req, res) => {
   try {
-    const { email, password, role, adminId } = req.body;
+    const { name, email, password, role, adminId } = req.body;
     const token = req.headers.authorization?.split("Bearer ")[1];
 
     if (!email || !password || !role) {
